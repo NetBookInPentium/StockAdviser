@@ -1,0 +1,17 @@
+C:\Users\alix2\OneDrive\Рабочий стол\StockAdviser\StockAdviser\bin\Debug\StockAdviser.exe.config
+C:\Users\alix2\OneDrive\Рабочий стол\StockAdviser\StockAdviser\bin\Debug\StockAdviser.exe
+C:\Users\alix2\OneDrive\Рабочий стол\StockAdviser\StockAdviser\bin\Debug\StockAdviser.pdb
+C:\Users\alix2\OneDrive\Рабочий стол\StockAdviser\StockAdviser\obj\Debug\StockAdviser.csproj.AssemblyReference.cache
+C:\Users\alix2\OneDrive\Рабочий стол\StockAdviser\StockAdviser\obj\Debug\StockAdviser.Form1.resources
+C:\Users\alix2\OneDrive\Рабочий стол\StockAdviser\StockAdviser\obj\Debug\StockAdviser.Properties.Resources.resources
+C:\Users\alix2\OneDrive\Рабочий стол\StockAdviser\StockAdviser\obj\Debug\StockAdviser.csproj.GenerateResource.cache
+C:\Users\alix2\OneDrive\Рабочий стол\StockAdviser\StockAdviser\obj\Debug\StockAdviser.csproj.CoreCompileInputs.cache
+C:\Users\alix2\OneDrive\Рабочий стол\StockAdviser\StockAdviser\obj\Debug\StockAdviser.exe
+C:\Users\alix2\OneDrive\Рабочий стол\StockAdviser\StockAdviser\obj\Debug\StockAdviser.pdb
+C:\Users\alix2\OneDrive\Рабочий стол\StockAdviser\StockAdviser\obj\Debug\StockAdviser.AutoReg.resources
+C:\Users\alix2\OneDrive\Рабочий стол\StockAdviser\StockAdviser\bin\Debug\System.Data.OleDb.dll
+C:\Users\alix2\OneDrive\Рабочий стол\StockAdviser\StockAdviser\bin\Debug\System.Data.OleDb.xml
+C:\Users\alix2\OneDrive\Рабочий стол\StockAdviser\StockAdviser\bin\Debug\Newtonsoft.Json.dll
+C:\Users\alix2\OneDrive\Рабочий стол\StockAdviser\StockAdviser\bin\Debug\Newtonsoft.Json.xml
+C:\Users\alix2\OneDrive\Рабочий стол\StockAdviser\StockAdviser\obj\Debug\StockAdv.B54E3300.Up2Date
+C:\Users\alix2\OneDrive\Рабочий стол\StockAdviser\StockAdviser\obj\Debug\StockAdviser.Info_form.resources

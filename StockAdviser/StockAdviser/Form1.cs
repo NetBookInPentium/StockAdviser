@@ -526,5 +526,47 @@ namespace StockAdviser
                     Environment.NewLine;
             }
         }
-    }
+
+		private void button_like_Click(object sender, EventArgs e)
+		{
+			if (comboBoxSearch.Text != "")
+			{
+                try
+                {
+                    Call_DB.Open();
+					DataSet stock_symbol = Call_DB.Request($"SELECT * FROM US_symbol_stock WHERE names_s = '{comboBoxSearch.Text}'");
+					string symboyl = stock_symbol.Tables[0].Rows[0][1].ToString();
+					string stock = comboBoxSearch.Text;
+					if (Call_DB.Select_fov(stock_symbol.Tables[0].Rows[0][1].ToString()))
+					{
+						DialogResult result = MessageBox.Show(
+		                "Данная акция уже находится в избранном, удалить ее?",
+		                "Обратите внимание",
+		                MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Information,
+                        MessageBoxDefaultButton.Button1,
+                        MessageBoxOptions.DefaultDesktopOnly);
+
+						if (result == DialogResult.Yes)
+							button1.BackColor = Color.Red;
+
+						this.TopMost = true;
+					}
+					else
+					{
+						Call_DB.Request($"INSERT INTO Favourites (`symbol_s`,`names_s`) VALUES ('{symboyl}','{stock}')");
+					}
+                    Call_DB.Close();
+                }
+				catch { 
+                    MessageBox.Show("Невозможно добавить в избранное");
+					Call_DB.Close();
+				}
+            }
+			else
+			{
+				MessageBox.Show("Поисковая строка пуста");
+			}
+		}
+	}
 }

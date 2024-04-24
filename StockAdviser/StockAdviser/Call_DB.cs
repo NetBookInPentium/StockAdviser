@@ -85,8 +85,25 @@ namespace StockAdviser.Resources
 
             return check;
         }
+		public bool Select_fov(string symbol)
+		{
+			string query = "SELECT * FROM Favourites WHERE symbol_s = @uL";
+			OleDbCommand command = new OleDbCommand(query, myConnection);
 
-        public DataSet Request(string query)
+			command.Parameters.Add("@uL", OleDbType.VarChar).Value = symbol;
+
+			OleDbDataReader myOleDbDataReader = command.ExecuteReader();
+			bool check;
+
+			if (myOleDbDataReader.Read())
+			{ check = true; }
+			else
+			{ check = false; }
+
+			return check;
+		}
+
+		public DataSet Request(string query)
         {
             OleDbDataAdapter command = new OleDbDataAdapter(query, myConnection);
 

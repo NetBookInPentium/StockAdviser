@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using Newtonsoft.Json.Linq;
 using System.Configuration;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Collections;
 
 
 namespace StockAdviser
@@ -40,6 +41,7 @@ namespace StockAdviser
         {
             groupBoxWinLouse.Hide();
             groupBoxCorp.Hide();
+            groupBoxFov.Hide();
             searh_load();
 
             chartStock.Legends.Clear();
@@ -91,6 +93,8 @@ namespace StockAdviser
             groupBoxWinLouse.Hide();
             groupBoxCorp.Hide();
             chartStock.Show();
+            button_like.Show();
+            groupBoxFov.Hide();
             url_string = "https://www.alphavantage.co/query?" +
             "function=TIME_SERIES_INTRADAY" +
             "&symbol=SYMBOL" +
@@ -110,6 +114,8 @@ namespace StockAdviser
             groupBoxWinLouse.Show();
             groupBoxSettings.Hide();
             groupBoxCorp.Hide();
+            button_like.Hide();
+            groupBoxFov.Hide();
         }
         private void buttonCorpAnalys_Click(object sender, EventArgs e)//Плановый анализ компании и ее акций
         {
@@ -124,6 +130,8 @@ namespace StockAdviser
             groupBoxWinLouse.Hide();
             groupBoxSettings.Hide();
             groupBoxCorp.Show();
+            button_like.Show();
+            groupBoxFov.Hide();
             open_searh();
             isCorp = true;
             url_string = "https://www.alphavantage.co/query?" +
@@ -141,6 +149,8 @@ namespace StockAdviser
             groupBoxWinLouse.Hide();
             groupBoxSettings.Hide();
             groupBoxCorp.Hide();
+            button_like.Hide();
+            groupBoxFov.Show();
         }
         private void buttonInfo_Click(object sender, EventArgs e)//Как это работает?
         {
@@ -164,6 +174,8 @@ namespace StockAdviser
             close_searh();
             groupBoxWinLouse.Hide();
             groupBoxCorp.Hide();
+            button_like.Hide() ;
+            groupBoxFov.Hide();
         }
         private void buttonExit_Click(object sender, EventArgs e)//Выход
         {
@@ -537,7 +549,7 @@ namespace StockAdviser
 					DataSet stock_symbol = Call_DB.Request($"SELECT * FROM US_symbol_stock WHERE names_s = '{comboBoxSearch.Text}'");
 					string symboyl = stock_symbol.Tables[0].Rows[0][1].ToString();
 					string stock = comboBoxSearch.Text;
-					if (Call_DB.Select_fov(stock_symbol.Tables[0].Rows[0][1].ToString()))
+					if (Call_DB.Select_fov(symboyl))
 					{
 						DialogResult result = MessageBox.Show(
 		                "Данная акция уже находится в избранном, удалить ее?",
@@ -545,32 +557,21 @@ namespace StockAdviser
 		                MessageBoxButtons.YesNo,
                         MessageBoxIcon.Information,
                         MessageBoxDefaultButton.Button1,
-                        MessageBoxOptions.DefaultDesktopOnly);
+                        MessageBoxOptions.RightAlign);
 
 						if (result == DialogResult.Yes)
-							button1.BackColor = Color.Red;
-
-						this.TopMost = true;
+                        {
+                            Call_DB.Request($"DELETE FROM Favourites WHERE names_s = '{comboBoxSearch.Text}'");
+                        }
 					}
-					else
-					{
-						Call_DB.Request($"INSERT INTO Favourites (`symbol_s`,`names_s`) VALUES ('{symboyl}','{stock}')");
-                        
-					}
+					else{ Call_DB.Request($"INSERT INTO Favourites (`symbol_s`,`names_s`) VALUES ('{symboyl}','{stock}')");
+                        MessageBox.Show("Добавлено в избранное");
+                    }
                     Call_DB.Close();
-					button_like.BackgroundImage = new Bitmap(Properties.Resources.love_like_heart_icon_196980);
-					System.Threading.Thread.Sleep(500);
-					button_like.BackgroundImage = new Bitmap(Properties.Resources.heart_likes_like_love_icon_251441);
 				}
-				catch { 
-                    MessageBox.Show("Невозможно добавить в избранное");
-					Call_DB.Close();
-				}
+				catch{ MessageBox.Show("Невозможно добавить в избранное"); Call_DB.Close();}
             }
-			else
-			{
-				MessageBox.Show("Поисковая строка пуста");
-			}
+			else{ MessageBox.Show("Поисковая строка пуста");}
 		}
 	}
 }

@@ -113,6 +113,26 @@ namespace StockAdviser.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap heart_likes_off {
+            get {
+                object obj = ResourceManager.GetObject("heart_likes_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap heart_likes_on {
+            get {
+                object obj = ResourceManager.GetObject("heart_likes_on", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap link_attach_icon_2591 {
             get {
                 object obj = ResourceManager.GetObject("link_attach_icon_2591", resourceCulture);
@@ -136,16 +156,6 @@ namespace StockAdviser.Properties {
         internal static System.Drawing.Bitmap link_attach_icon_259108 {
             get {
                 object obj = ResourceManager.GetObject("link_attach_icon_259108", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap link_attach_icon_3131 {
-            get {
-                object obj = ResourceManager.GetObject("link_attach_icon_3131", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,16 +193,6 @@ namespace StockAdviser.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap love_like_heart_icon_196980 {
-            get {
-                object obj = ResourceManager.GetObject("love_like_heart_icon_196980", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap menu_circle_icon_259190 {
             get {
                 object obj = ResourceManager.GetObject("menu_circle_icon_259190", resourceCulture);
@@ -216,16 +216,6 @@ namespace StockAdviser.Properties {
         internal static System.Drawing.Bitmap x_close_icon_259101 {
             get {
                 object obj = ResourceManager.GetObject("x_close_icon_259101", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap информация {
-            get {
-                object obj = ResourceManager.GetObject("информация", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

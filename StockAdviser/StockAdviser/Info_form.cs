@@ -79,5 +79,16 @@ namespace StockAdviser
             ProcessStartInfo sInfo = new ProcessStartInfo("https://www.alphavantage.co/");
             Process.Start(sInfo);
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo sInfo = new ProcessStartInfo("https://github.com/NetBookInPentium/StockAdviser/");
+            Process.Start(sInfo);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

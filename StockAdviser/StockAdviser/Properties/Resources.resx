@@ -148,14 +148,14 @@
   <data name="x_close_icon_259101" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\x_close_icon_259101.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="heart_likes_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\heart_likes_off1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="2_page_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2_page_.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="link_attach_icon_64222" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\link_attach_icon_64222.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="информация" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\информация.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="link_attach_icon_259108" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\link_attach_icon_259108.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,10 +163,7 @@
   <data name="link_attach_icon_323" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\link_attach_icon_323.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="link_attach_icon_3131" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\link_attach_icon_3131.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="love_like_heart_icon_196980" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\love_like_heart_icon_1969801.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="heart_likes_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\heart_likes_on1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

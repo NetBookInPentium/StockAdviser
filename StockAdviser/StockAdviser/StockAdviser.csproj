@@ -107,19 +107,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -154,9 +154,6 @@
     <None Include="Resources\link_attach_icon_25910.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\link_attach_icon_3131.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\serch_imm.png" />
   </ItemGroup>
   <ItemGroup>
@@ -170,9 +167,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\информация.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1_page.jpg" />
@@ -190,8 +184,10 @@
     <None Include="Resources\heart_likes_like_love_icon_251441.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\love_like_heart_icon_196980.png" />
-    <None Include="Resources\love_like_heart_icon_1969801.png" />
+    <None Include="Resources\heart_likes_off1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart_likes_on1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

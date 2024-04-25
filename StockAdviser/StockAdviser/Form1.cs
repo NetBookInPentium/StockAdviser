@@ -555,9 +555,13 @@ namespace StockAdviser
 					else
 					{
 						Call_DB.Request($"INSERT INTO Favourites (`symbol_s`,`names_s`) VALUES ('{symboyl}','{stock}')");
+                        
 					}
                     Call_DB.Close();
-                }
+					button_like.BackgroundImage = new Bitmap(Properties.Resources.love_like_heart_icon_196980);
+					System.Threading.Thread.Sleep(500);
+					button_like.BackgroundImage = new Bitmap(Properties.Resources.heart_likes_like_love_icon_251441);
+				}
 				catch { 
                     MessageBox.Show("Невозможно добавить в избранное");
 					Call_DB.Close();

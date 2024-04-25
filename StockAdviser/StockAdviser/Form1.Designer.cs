@@ -33,6 +33,7 @@
 			System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
 			System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
 			this.panelDayValue = new System.Windows.Forms.Panel();
+			this.button_like = new System.Windows.Forms.Button();
 			this.groupBoxCorp = new System.Windows.Forms.GroupBox();
 			this.label8 = new System.Windows.Forms.Label();
 			this.textBoxCorpInfo = new System.Windows.Forms.TextBox();
@@ -60,6 +61,7 @@
 			this.buttonMethDay = new System.Windows.Forms.Button();
 			this.buttonSearch = new System.Windows.Forms.Button();
 			this.labelSearch = new System.Windows.Forms.Label();
+			this.pictureBoxSearch = new System.Windows.Forms.PictureBox();
 			this.comboBoxSearch = new System.Windows.Forms.ComboBox();
 			this.labelHead = new System.Windows.Forms.Label();
 			this.buttonFovourites = new System.Windows.Forms.Button();
@@ -72,8 +74,6 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.panelSideMenu = new System.Windows.Forms.Panel();
-			this.button_like = new System.Windows.Forms.Button();
-			this.pictureBoxSearch = new System.Windows.Forms.PictureBox();
 			this.pictureBox8 = new System.Windows.Forms.PictureBox();
 			this.pictureBox7 = new System.Windows.Forms.PictureBox();
 			this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -87,8 +87,8 @@
 			this.groupBoxSettings.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.chartStock)).BeginInit();
 			this.groupBoxDuration.SuspendLayout();
-			this.panelSideMenu.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearch)).BeginInit();
+			this.panelSideMenu.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -118,6 +118,22 @@
 			this.panelDayValue.Name = "panelDayValue";
 			this.panelDayValue.Size = new System.Drawing.Size(1591, 1061);
 			this.panelDayValue.TabIndex = 1;
+			// 
+			// button_like
+			// 
+			this.button_like.BackColor = System.Drawing.Color.Transparent;
+			this.button_like.BackgroundImage = global::StockAdviser.Properties.Resources.heart_likes_like_love_icon_251441;
+			this.button_like.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.button_like.FlatAppearance.BorderSize = 0;
+			this.button_like.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button_like.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.button_like.ForeColor = System.Drawing.Color.White;
+			this.button_like.Location = new System.Drawing.Point(642, 145);
+			this.button_like.Name = "button_like";
+			this.button_like.Size = new System.Drawing.Size(43, 39);
+			this.button_like.TabIndex = 33;
+			this.button_like.UseVisualStyleBackColor = false;
+			this.button_like.Click += new System.EventHandler(this.button_like_Click);
 			// 
 			// groupBoxCorp
 			// 
@@ -478,6 +494,16 @@
 			this.labelSearch.TabIndex = 23;
 			this.labelSearch.Text = "Поиск нужной акции";
 			// 
+			// pictureBoxSearch
+			// 
+			this.pictureBoxSearch.Image = global::StockAdviser.Properties.Resources.serch_imm;
+			this.pictureBoxSearch.Location = new System.Drawing.Point(30, 145);
+			this.pictureBoxSearch.Name = "pictureBoxSearch";
+			this.pictureBoxSearch.Size = new System.Drawing.Size(39, 39);
+			this.pictureBoxSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pictureBoxSearch.TabIndex = 22;
+			this.pictureBoxSearch.TabStop = false;
+			// 
 			// comboBoxSearch
 			// 
 			this.comboBoxSearch.BackColor = System.Drawing.Color.White;
@@ -653,32 +679,6 @@
 			this.panelSideMenu.Size = new System.Drawing.Size(343, 1061);
 			this.panelSideMenu.TabIndex = 0;
 			// 
-			// button_like
-			// 
-			this.button_like.BackColor = System.Drawing.Color.Transparent;
-			this.button_like.BackgroundImage = global::StockAdviser.Properties.Resources.heart_likes_like_love_icon_251441;
-			this.button_like.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.button_like.FlatAppearance.BorderSize = 0;
-			this.button_like.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button_like.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button_like.ForeColor = System.Drawing.Color.White;
-			this.button_like.Location = new System.Drawing.Point(642, 145);
-			this.button_like.Name = "button_like";
-			this.button_like.Size = new System.Drawing.Size(43, 39);
-			this.button_like.TabIndex = 33;
-			this.button_like.UseVisualStyleBackColor = false;
-			this.button_like.Click += new System.EventHandler(this.button_like_Click);
-			// 
-			// pictureBoxSearch
-			// 
-			this.pictureBoxSearch.Image = global::StockAdviser.Properties.Resources.serch_imm;
-			this.pictureBoxSearch.Location = new System.Drawing.Point(30, 145);
-			this.pictureBoxSearch.Name = "pictureBoxSearch";
-			this.pictureBoxSearch.Size = new System.Drawing.Size(39, 39);
-			this.pictureBoxSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.pictureBoxSearch.TabIndex = 22;
-			this.pictureBoxSearch.TabStop = false;
-			// 
 			// pictureBox8
 			// 
 			this.pictureBox8.Image = global::StockAdviser.Properties.Resources.link_attach_icon_25910;
@@ -771,9 +771,9 @@
 			this.groupBoxSettings.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.chartStock)).EndInit();
 			this.groupBoxDuration.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearch)).EndInit();
 			this.panelSideMenu.ResumeLayout(false);
 			this.panelSideMenu.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearch)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

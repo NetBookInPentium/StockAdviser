@@ -183,6 +183,16 @@ namespace StockAdviser.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap love_like_heart_icon_196980 {
+            get {
+                object obj = ResourceManager.GetObject("love_like_heart_icon_196980", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap menu_circle_icon_259190 {
             get {
                 object obj = ResourceManager.GetObject("menu_circle_icon_259190", resourceCulture);

@@ -189,5 +189,9 @@
   <ItemGroup>
     <None Include="Resources\heart_likes_like_love_icon_251441.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\love_like_heart_icon_196980.png" />
+    <None Include="Resources\love_like_heart_icon_1969801.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

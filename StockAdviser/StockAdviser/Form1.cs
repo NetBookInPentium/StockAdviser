@@ -160,6 +160,7 @@ namespace StockAdviser
             labelHead.Text = "Как это работает?";
             close_searh();
             groupBoxWinLouse.Hide();
+            button_like.Hide();
             groupBoxCorp.Hide();
             Info_form info_Form = new Info_form();
             info_Form.ShowDialog();

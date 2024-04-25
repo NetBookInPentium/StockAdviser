@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Susny\\StockAdviser\\StockAdviser\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{45157B32-DBB2-4C4B-A4A9-BA09F49813A9}|StockAdviser\\StockAdviser.csproj|D:\\Susny\\StockAdviser\\StockAdviser\\stockadviser\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{45157B32-DBB2-4C4B-A4A9-BA09F49813A9}|StockAdviser\\StockAdviser.csproj|solutionrelative:stockadviser\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{45157B32-DBB2-4C4B-A4A9-BA09F49813A9}|StockAdviser\\StockAdviser.csproj|D:\\Susny\\StockAdviser\\StockAdviser\\stockadviser\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45157B32-DBB2-4C4B-A4A9-BA09F49813A9}|StockAdviser\\StockAdviser.csproj|solutionrelative:stockadviser\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45157B32-DBB2-4C4B-A4A9-BA09F49813A9}|StockAdviser\\StockAdviser.csproj|d:\\susny\\stockadviser\\stockadviser\\stockadviser\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45157B32-DBB2-4C4B-A4A9-BA09F49813A9}|StockAdviser\\StockAdviser.csproj|solutionrelative:stockadviser\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{45157B32-DBB2-4C4B-A4A9-BA09F49813A9}|StockAdviser\\StockAdviser.csproj|d:\\susny\\stockadviser\\stockadviser\\stockadviser\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45157B32-DBB2-4C4B-A4A9-BA09F49813A9}|StockAdviser\\StockAdviser.csproj|solutionrelative:stockadviser\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,24 +18,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\Susny\\StockAdviser\\StockAdviser\\StockAdviser\\Form1.cs",
               "RelativeDocumentMoniker": "StockAdviser\\Form1.cs",
               "ToolTip": "D:\\Susny\\StockAdviser\\StockAdviser\\StockAdviser\\Form1.cs",
               "RelativeToolTip": "StockAdviser\\Form1.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAgwCsAAAAfAAAA",
+              "ViewState": "AQIAAI0AAAAAAAAAAAAmwKYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-25T12:25:16.026Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\Susny\\StockAdviser\\StockAdviser\\StockAdviser\\Form1.cs",
               "RelativeDocumentMoniker": "StockAdviser\\Form1.cs",

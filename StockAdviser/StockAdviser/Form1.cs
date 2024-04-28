@@ -266,6 +266,7 @@ namespace StockAdviser
                         stocks_value = api_request(url);
                         corpMeth(stocks_value);
                     }
+                    Call_DB.Close();
                 }
                 else
                 {
@@ -364,6 +365,7 @@ namespace StockAdviser
                 $"'{stock["52WeekHigh"]}','{stock["52WeekLow"]}','{stock["50DayMovingAverage"]}'," +
                 $"'{stock["200DayMovingAverage"]}','{stock["DividendDate"]}','{stock["ExDividendDate"]}')";
             Call_DB.Request(corp_add);
+            Call_DB.Close();
 
         }
         //Создаем и заполняем график

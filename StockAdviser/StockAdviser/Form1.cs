@@ -151,6 +151,15 @@ namespace StockAdviser
             groupBoxCorp.Hide();
             button_like.Hide();
             groupBoxFov.Show();
+            url_string = "https://www.alphavantage.co/query?" +
+                "function=OVERVIEW" +
+                "&symbol=SYMBOL" +
+                $"&apikey={api_key}";
+            DataSet ds = Call_DB.Request("SELECT * FROM Favourites");
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                comboBox3.Items.Add(ds.Tables[0].Rows[i][1]);
+            }
         }
         private void buttonInfo_Click(object sender, EventArgs e)//Как это работает?
         {
@@ -233,7 +242,7 @@ namespace StockAdviser
                     Call_DB.Open();
                     if (Call_DB.Select_corp(stock_symbol.Tables[0].Rows[0][1].ToString()))
                     {
-                        corp = Call_DB.Request("SELECT * FROM Corp_orders");
+                        corp = Call_DB.Request($"SELECT * FROM Corp_orders WHERE symbol = '{stock_symbol.Tables[0].Rows[0][1]}'");
 
                         textBoxCorpInfo.Text = "";
                         textBoxCorpInfo.Text +=
@@ -260,11 +269,11 @@ namespace StockAdviser
                         Environment.NewLine + "Скользящая за 200 д.: " + corp.Tables[0].Rows[0][21] +
                         Environment.NewLine + "Выплата дивидендов: " + corp.Tables[0].Rows[0][22] +
                         Environment.NewLine + "Последняя выплата: " + corp.Tables[0].Rows[0][23];
-                }
+                    }
                     else
                     {
                         stocks_value = api_request(url);
-                        corpMeth(stocks_value);
+                        AddCorpMeth(stocks_value);
                     }
                     Call_DB.Close();
                 }
@@ -321,7 +330,8 @@ namespace StockAdviser
             }
 
         }
-        public void corpMeth(JObject stock)
+      
+        public void AddCorpMeth(JObject stock)
         {
             string corp_add;
             textBoxCorpInfo.Text = "";
@@ -576,5 +586,61 @@ namespace StockAdviser
             }
 			else{ MessageBox.Show("Поисковая строка пуста");}
 		}
-	}
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataSet corp;
+                string url = url_string.Replace("SYMBOL", $"{comboBox3.Text}");
+                JObject stocks_value;
+                if (isCorp)
+                {
+                    Call_DB.Open();
+                    if (Call_DB.Select_corp(comboBox3.Text.ToString()))
+                    {
+                        corp = Call_DB.Request($"SELECT * FROM Corp_orders WHERE symbol = '{comboBox3.Text}'");
+
+                        textBox4.Text = "";
+                        textBox4.Text +=
+                        "Символ: " + corp.Tables[0].Rows[0][1] +
+                        Environment.NewLine + "Тип акций: " + corp.Tables[0].Rows[0][2] +
+                        Environment.NewLine + "Название: " + corp.Tables[0].Rows[0][3] +
+                        Environment.NewLine + "CIK: " + corp.Tables[0].Rows[0][4] +
+                        Environment.NewLine + "Обмен: " + corp.Tables[0].Rows[0][5] +
+                        Environment.NewLine + "Валюта: " + corp.Tables[0].Rows[0][6] +
+                        Environment.NewLine + "Страна: " + corp.Tables[0].Rows[0][7] +
+                        Environment.NewLine + "Сектор: " + corp.Tables[0].Rows[0][8] +
+                        Environment.NewLine + "Направление: " + corp.Tables[0].Rows[0][9] +
+                        Environment.NewLine + "Адрес: " + corp.Tables[0].Rows[0][10] +
+                        Environment.NewLine + "Окончание года: " + corp.Tables[0].Rows[0][11] +
+                        Environment.NewLine + "Последний квартал: " + corp.Tables[0].Rows[0][12] +
+                        Environment.NewLine + "Капитализация: " + corp.Tables[0].Rows[0][13] +
+                        Environment.NewLine + "EBITDA: " + corp.Tables[0].Rows[0][14] +
+                        Environment.NewLine + "EPS: " + corp.Tables[0].Rows[0][15] +
+                        Environment.NewLine + "Дивиденды на акцию: " + corp.Tables[0].Rows[0][16] +
+                        Environment.NewLine + "Предполагаемая цена: " + corp.Tables[0].Rows[0][17] +
+                        Environment.NewLine + "Минимум за 52 н.: " + corp.Tables[0].Rows[0][18] +
+                        Environment.NewLine + "Максимум за 52 н.: " + corp.Tables[0].Rows[0][19] +
+                        Environment.NewLine + "Скользящая за 50 д.: " + corp.Tables[0].Rows[0][20] +
+                        Environment.NewLine + "Скользящая за 200 д.: " + corp.Tables[0].Rows[0][21] +
+                        Environment.NewLine + "Выплата дивидендов: " + corp.Tables[0].Rows[0][22] +
+                        Environment.NewLine + "Последняя выплата: " + corp.Tables[0].Rows[0][23];
+                    }
+                    else
+                    {
+                        stocks_value = api_request(url);
+                        AddCorpMeth(stocks_value);
+                    }
+                    Call_DB.Close();
+                }
+                else
+                {
+                    stocks_value = api_request(url);
+                    durationMeth(stocks_value);
+                }
+            }
+            catch { MessageBox.Show("Поисковая строка пуста"); }
+        }
+    }
 }

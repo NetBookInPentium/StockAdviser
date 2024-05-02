@@ -151,6 +151,7 @@ namespace StockAdviser
             groupBoxCorp.Hide();
             button_like.Hide();
             groupBoxFov.Show();
+            isCorp = true;
             url_string = "https://www.alphavantage.co/query?" +
                 "function=OVERVIEW" +
                 "&symbol=SYMBOL" +
@@ -629,15 +630,13 @@ namespace StockAdviser
                     }
                     else
                     {
-                        stocks_value = api_request(url);
-                        AddCorpMeth(stocks_value);
+                        MessageBox.Show("2");
                     }
                     Call_DB.Close();
                 }
                 else
                 {
-                    stocks_value = api_request(url);
-                    durationMeth(stocks_value);
+                    MessageBox.Show("3");
                 }
             }
             catch { MessageBox.Show("Поисковая строка пуста"); }

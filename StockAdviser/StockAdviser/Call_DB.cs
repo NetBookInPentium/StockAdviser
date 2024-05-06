@@ -28,21 +28,13 @@ namespace StockAdviser.Resources
             { 
                 myConnection.Open(); 
             }
-            catch
+            catch (Exception ex)
             {
-                try
-                {
-                    connectString = $"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={db_name}.mdb;";
-                    myConnection.Open();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Возникло  исключение: {ex}", "Ошибка",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error,
-                    MessageBoxDefaultButton.Button1,
-                    MessageBoxOptions.DefaultDesktopOnly);
-                }
+                MessageBox.Show($"Возникло  исключение: {ex}", "Ошибка",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error,
+                MessageBoxDefaultButton.Button1,
+                MessageBoxOptions.DefaultDesktopOnly);
             }
         }
         public void Close()

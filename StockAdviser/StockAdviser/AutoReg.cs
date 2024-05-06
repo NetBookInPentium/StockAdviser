@@ -51,7 +51,6 @@ namespace StockAdviser
                 label5.Show();
             }
             Call_db.Close();
-
         }
     }
 }
